@@ -10,6 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let selPais = ColeccionDePaises()
+    let selHamburguesa = ColeccionDeHamburguesas()
+    
+    @IBOutlet weak var obtenPais: UILabel!
+    
+    
+    @IBOutlet weak var obtenHamburguesa: UILabel!
+    
+    
+    @IBAction func quieroHamburguesa(sender: UIButton) {
+        let paisAleatorio = selPais.obtenPais()
+        obtenPais.text = paisAleatorio
+        
+        let hambAleatoria = selHamburguesa.obtenHamburguesa()
+        obtenHamburguesa.text = hambAleatoria
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
